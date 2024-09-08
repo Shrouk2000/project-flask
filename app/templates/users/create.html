@@ -1,0 +1,20 @@
+{% extends './base.html' %}
+
+{% block title %}Create user{% endblock %}
+
+{% block content %}
+  <h1 style="text-align: center"> Add new user</h1>
+
+  <form method="POST" action="{{ url_for('user_blueprint.create_user') }}">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+    <label for="image">Image URL:</label>
+    <input type="text" id="image" name="image" required>
+    <input type="submit" value="Create User">
+</form>
+
+{% endblock %}
+
+
